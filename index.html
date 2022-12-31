@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#FFF" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <title>Happy New Year~</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://gw.alipayobjects.com/zos/k/vx/favicon.svg" />
+
+    <meta name="title" content="Happy New Year" />
+    <meta name="author" content="Tw93" />
+    <meta property="og:title" content="Happy New Year" />
+    <meta property="og:description" content="用代码画一个兔子庆祝下吧~"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tw93.netlify.app" />
+    <meta property="og:image" content="https://tw93.netlify.app/img/1024-logo.png"/>
+
+    <meta name="twitter:creator" content="@HiTw93" />
+    <meta name="twitter:site" content="https://tw93.netlify.app" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://tw93.netlify.app" />
+    <meta property="twitter:image" content="https://tw93.netlify.app/img/1024-banner.png" />
+    <meta property="twitter:title" content="祝你 1024 节日快乐" />
+    <meta property="twitter:description" content="用代码画一个 兔子庆祝下吧~" />
+
+    <style>
+      @font-face {
+        font-family: 'JetBrains Mono';
+        src: url('https://gw.alipayobjects.com/os/k/app/JetBrainsMono-Regular.ttf') format('truetype');
+      }
+
+      * {
+        font-family: JetBrains Mono, SF Mono, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+      }
+      body {
+        height: 100vh;
+        color:wheat;
+        background:;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+    </style>
+
+  </head>
+  <body>
+    <script>
+      let styles = `\
+
+
+/* 先搞一个写代码的 pre 标签试试 */
+pre {
+  color: #61ffca;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  padding: 24px 16px;
+  margin-top: 0;
+  overflow-y: auto;
+  transition: all 500ms;
+}
+
+
+
+/* 为了更好的画兔子，我们把代码移到下面来 */
+pre {
+  top: 30%;
+  height: 58%
+}
+
+/* 哈哈因为我抽了下样式，看起来会有些长~ */
+.github::before,.github::after,.github>i::before,.github>i::after,.github>i>i::before,.github>i>i::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #fff;
+}
+/*万物更新，旧疾当愈；往事清零，爱恨随意。*/
+
+/* 画完这个容器，就可以开始了 */
+.github-box {
+  width: 100%;
+  height: 42%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 我去，感觉不好画，要不先画个圆 */
+.github {
+  width: 200px;
+  height: 200px;
+  background: #15141a;
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+  position: relative;
+}
+
+/*这一年，失去，获得，释怀，完结*/
+/* 脸好像是这个样子 */
+.github::before {
+  width: 120px;
+  height: 108px;
+  top: 41px;
+  left: 40px;
+  border-radius: 50%;
+  box-shadow: 16px 0px 0 -6px #fff, -16px 0px 0 -6px #fff;
+}
+
+/* 来画一个很简单的脖子 */
+.github::after {
+  width: 46px;
+  height: 62px;
+  top: 140px;
+  left: 77px;
+  border-radius: 14px 14px 0 0;
+}
+/*愿岁并谢，与友长兮*/
+/* 耳朵貌似这样写是可以的 */
+.github>i::before {
+	width: 65px;
+			height: 128px;
+			background: white;
+			box-shadow: 0 0 2px 0 white;
+			border-radius: 53px 53px 65px 65px/53px 53px 254px 254px;
+			position: absolute;
+			left: 65px;
+			top: -49px;
+			transform: rotateZ(-24deg);
+}
+
+/* 再来一只耳朵 */
+.github>i::after {
+  width: 40px;
+  height: 40px;
+  top: 35px;
+  right: 40px;
+  border-radius: 15% 70% 15% 20%;
+  transform: rotate(79deg);
+}
+
+/*善良，勇敢，优秀，绝不妥协
+祝你，也祝我*/
+
+/* 再来一个试试看行不行 */
+.github>i>i::after {
+  width: 40px;
+  height: 40px;
+  border-radius: 50% 50%;
+  top: 163px;
+  left: 12px;
+  border-top: 40px solid white;
+  border-left: 40px solid white;
+  border-right: 40px solid white;
+  background: transparent;
+  transform: rotate(39deg);
+}
+
+/* 好，就是这样，画好啦！*/
+/*
+*虽然不怎么像，确实不像哈哈。
+*农历新年再来吧！
+*/
+/*              那  
+*             祝  你
+*         兔 年 行 大 运
+*        兔 年 到 鸿 运 照
+*       兔 转 乾 坤 行 大 运
+*       兔 转 乾 坤 开 鸿 运
+*     吉 星 高 照，兔 福 相 随
+*     吉 兔 贺 岁 ，欢 乐 祥 瑞
+*     金 兔 祈 福 ， 阖 家 幸 福
+*   “ 兔 ” 然 暴 富 ，财 运 亨 通
+*   “ 兔 ” 飞 猛 进 ，前 “ 兔 ” 似 锦
+*兔 岁 已 赢 十 段 锦 ，牛 年 更 上 一 层 楼
+*兔 年 好 运 长 似 龙 ， 家 庭 和 睦 多 兴 隆
+ */
+
+`;
+
+      const getStyleHtml = function () {
+        return document.getElementById('style-text').innerHTML;
+      };
+
+      let openComment = false;
+
+      const writeStyleChar = function (which) {
+        if (which === '/' && !openComment) {
+          openComment = true;
+          styles = getStyleHtml() + which;
+        } else if (which === '/' && openComment) {
+          openComment = false;
+          styles = getStyleHtml().replace(
+            /(\/[^\/]*\*)$/,
+            '<em class="comment">$1/</em>',
+          );
+        } else if (which === ':') {
+          styles = getStyleHtml().replace(
+            /([a-zA-Z- ^\n]*)$/,
+            '<em class="key">$1</em>:',
+          );
+        } else if (which === ';') {
+          styles = getStyleHtml().replace(
+            /([^:]*)$/,
+            '<em class="value">$1</em>;',
+          );
+        } else if (which === '{') {
+          styles = getStyleHtml().replace(
+            /(.*)$/,
+            '<em class="selector">$1</em>{',
+          );
+        } else {
+          styles = getStyleHtml() + which;
+        }
+        document.getElementById('style-text').innerHTML = styles;
+        return document
+          .getElementById('style-tag')
+          .insertAdjacentHTML('beforeend', which);
+      };
+
+      const writeStyles = function (message, index, interval) {
+        if (index < message.length) {
+          const pre = document.getElementById('style-text');
+          pre.scrollTop = pre.scrollHeight;
+          writeStyleChar(message[index++]);
+          return setTimeout(
+            () => writeStyles(message, index, interval),
+            interval,
+          );
+        }
+      };
+
+      document.body.insertAdjacentHTML(
+        'beforeend',
+        `\<style id="style-tag"></style>
+          <div class="github-box">
+            <span class="github"><i><i></i></i></span>
+         </div>
+         <pre id="style-text"></pre>\
+`,
+      );
+      writeStyles(styles, 0, 24);
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YVEG7R01YM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YVEG7R01YM');
+    </script>
+
+<!-------------------------------------烟花----------------------------------->
+<script>
+    let chars, particles, canvas, ctx, w, h, current;
+let duration = 5000;
+let str = ['Happy', 'New', 'Year' , '2023'];
+
+init();
+resize();
+requestAnimationFrame(render);
+addEventListener('resize', resize);
+
+function makeChar(c){
+    let tmp = document.createElement('canvas');
+    let size = tmp.width = tmp.height = w<400?200:300;
+    let tmpCtx = tmp.getContext('2d');
+    tmpCtx.font = 'bold '+size+'px Arial';
+    tmpCtx.fillStyle = 'white';
+    tmpCtx.textBaseline = "middle";
+    tmpCtx.textAlign = "center";
+    tmpCtx.fillText(c, size/2, size/2);
+    let char2 = tmpCtx.getImageData(0,0,size,size);
+    let char2particles = [];
+    for(var i=0; char2particles.length< particles; i++){
+        let x = size*Math.random();
+        let y = size*Math.random();
+        let offset = parseInt(y)*size*4 + parseInt(x)*4;
+        if(char2.data[offset])
+            char2particles.push([x-size/2,y-size/2])
+    }
+    return char2particles;
+}
+
+function init() {
+    canvas = document.createElement('canvas');
+    document.body.append(canvas);
+    document.body.style.margin = 0;
+    document.body.style.overflow = 'hidden'
+    document.body.style.background = 'white'
+    ctx = canvas.getContext('2d');
+}
+
+function resize() {
+    w = canvas.width = innerWidth;
+    h = canvas.height = innerHeight;
+    particles = innerWidth<400? 55 : 99;
+}
+
+function makeChars(t) {
+    let actual = parseInt(t / duration) % str.length;
+    if (current === actual)
+        return
+    current = actual;
+    chars = [...str[actual]].map(makeChar);
+}
+
+function render(t) {
+    makeChars(t);
+    requestAnimationFrame(render);
+    ctx.fillStyle = '#00000010'
+    ctx.fillRect(0, 0, w, h);
+    chars.forEach((pts,i) => firework(t, i, pts));
+}
+
+function firework(t, i, pts) {
+    t -= i*200;
+    let id = i + chars.length*parseInt(t - t%duration);
+    t = t % duration / duration;
+    let dx = (i+1)*w/(1+chars.length);
+    dx += Math.min(0.33, t)*100*Math.sin(id);
+    let dy = h*0.5;
+    dy += Math.sin(id*4547.411)*h*0.1;
+    if (t < 0.33) {
+      rocket(dx, dy, id, t*3);
+    } else {
+      explosion(pts, dx, dy, id, Math.min(1, Math.max(0, t-0.33)*2));
+    }
+}
+
+function rocket(x, y, id, t) {
+  ctx.fillStyle = 'white';
+  let r = 2-2*t + Math.pow(t, 15*t)*16;
+  y = h - y*t;
+  circle(x, y, r)
+}
+
+function explosion(pts, x, y, id, t) {
+  let dy = (t*t*t)*20;
+  let r = Math.sin(id)*1 + 3  
+  r = t<0.5 ? (t+0.5)*t*r:r-t*r
+  ctx.fillStyle = `hsl(${id*55}, 55%, 55%)`;
+  pts.forEach((xy,i) => {
+      if (i%20 === 0)
+        ctx.fillStyle = `hsl(${id*55}, 55%, ${55+t*Math.sin(t*55+i)*45}%)`;
+      circle(t*xy[0] + x, h - y + t*xy[1] + dy, r)
+  });
+}
+
+function circle(x,y,r) {
+  ctx.beginPath();
+  ctx.ellipse(x, y, r, r, 0, 0, 6.283);
+  ctx.fill();
+}
+</script>
+  </body>
+</html>
